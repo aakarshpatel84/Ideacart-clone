@@ -157,7 +157,7 @@
             <!-- Price Detail -->
             <p>Buy at best price from hare</p>
             <div class="inner">
-                <h2>Rs. 263</h2>
+                <h2 id="rate"></h2>
                 <button>Buy Now</button>
             </div>
             <p>Get Instant Cashback when you pay using Amazon Pay... Click Here</p>
@@ -220,7 +220,7 @@
                 </tr>
                 <tr>
                     <td>Amazon, Paperback</td>
-                    <td>Rs. 339.0</td>
+                    <td id="trate"></td>
                     <td><input type="button" value="Add to cart"></td>
                 </tr>
             </table>
@@ -239,6 +239,8 @@
     document.getElementById('imageId').setAttribute('src', currentPageData.img)
     document.getElementById("pera").innerText = currentPageData.details
     document.getElementById("subtitle").innerText = currentPageData.category
+    document.getElementById("rate").innerText = currentPageData.price
+    document.getElementById("trate").innerText = currentPageData.price
 
 
 
