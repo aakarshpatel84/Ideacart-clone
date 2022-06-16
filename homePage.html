@@ -545,7 +545,9 @@
             proNameDiv.append(proName);
             box11.append(proImgDiv, proNameDiv);
             box11.addEventListener("click", function () {
-                location.href = el.pagelink;
+                localStorage.setItem('currentPageData', JSON.stringify(el));
+
+                location.href = '/product.html';
             })
 
 
