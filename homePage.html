@@ -23,6 +23,7 @@
         }
 
         #crauser>button {
+            border: 1px solid grey;
             font-size: 20px;
             color: #fc2802;
             position: absolute;
@@ -31,6 +32,12 @@
             height: 50px;
             width: 50px;
             background-color: rgba(233, 179, 195, 0.2);
+        }
+
+        #crauser>button:hover {
+            background-color: #2874f0;
+            color: white;
+            transform: scale(1.1);
         }
 
         #crauser>button:nth-child(2) {
@@ -75,7 +82,12 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 15px 10px;
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+
+        #container>div:hover {
+            transform: scale(1.02);
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         }
 
         #box11:hover {
@@ -145,6 +157,7 @@
         #nextPage>button:hover {
             background-color: #388e3c;
             cursor: pointer;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -432,7 +445,7 @@
     });
 
     document.querySelector("#nextPage").addEventListener("click", function () {
-        location.href = "PageNo2.html"  //next page number 2 href
+        location.href = "page2.html"  //next page number 2 href
     });
 
 
