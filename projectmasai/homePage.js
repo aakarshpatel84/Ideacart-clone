@@ -303,3 +303,18 @@ let productArr = [
       displayfunction(productArr);
     }
   }
+  document.querySelector("#check-box>form").addEventListener("click",searchData); 
+  function searchData(event)
+  {
+    event.preventDefault();
+    let search=document.querySelector(".search").value;
+    console.log( productArr);
+    productArr.filter(function(ele)
+    {
+        return ele.category=search;
+       
+    });
+    
+    displayfunction(productArr);
+    
+  }
