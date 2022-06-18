@@ -165,7 +165,7 @@ function displayfunction() {
     box11.addEventListener("click", function () {
       localStorage.setItem("currentPageData", JSON.stringify(el));
 
-      location.href = "product.html";
+      location.href = "productPage.html";
     });
 
     let box12 = document.createElement("div");
@@ -187,7 +187,7 @@ function displayfunction() {
         cartData.push(el);
         localStorage.setItem("buyCartData", JSON.stringify(cartData));
       } else {
-        alert("Item already in cart");
+        // alert("Item already in cart");
       }
       location.href = "cart.html"; // give cart page href
     });
