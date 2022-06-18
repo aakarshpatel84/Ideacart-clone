@@ -48,12 +48,14 @@ body {
     border-radius: 9px;
     background-color: #f0ad4e;
     border-style: none;
-    width: 32%;
+    width: 25%;
     color: white;
-    font-size: 17px;
+    font-size: 15px;
     margin-left: 130px;
     text-align: center;
     margin-bottom: 10px;
+transition-property: width, background-color;
+transition-duration: 1s,1s;
 }
 
 .add-to-cart-button>input {
@@ -61,22 +63,30 @@ body {
     margin: auto;
     border-radius: 9px;
     background-color: #337ab7;
+    /* background-color: #32f37c; */
     border-style: none;
     width: 60%;
     color: rgb(255, 255, 255);
     text-align: center;
+    transition-property: height, background-color;
+    transition-duration: 1s,1s;
 
 }
 
 #by:hover {
     counter-reset: white;
     background-color: #ff9806;
+    width: 150px;
+    
 }
 
 .add-to-cart-button>input:hover {
     counter-reset: white;
     /* background-color: #0085f9; */
     background-color: #002fff;
+    height: 80px;
+    
+    
 }
 
 #right {
