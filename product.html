@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link href="data.json" rel="import" />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <style>
     body {
@@ -22,6 +24,7 @@
         display: flex;
         margin: auto;
         width: 70%;
+        margin-top: 10px;
 
     }
 
@@ -51,7 +54,7 @@
         /* text-align: center; */
     }
 
-    button {
+    #by {
 
         height: 45px;
         margin: auto;
@@ -62,26 +65,28 @@
         color: white;
         font-size: 17px;
         margin-left: 130px;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
-    input {
+    #btns>input {
         height: 36px;
         margin: auto;
         border-radius: 9px;
         background-color: #337ab7;
         border-style: none;
         width: 60%;
-        color: white;
+        color: rgb(255, 255, 255);
         text-align: center;
 
     }
 
-    button:hover {
+    #by:hover {
         counter-reset: white;
         background-color: #ff9806;
     }
 
-    input:hover {
+    #btns>input:hover {
         counter-reset: white;
         /* background-color: #0085f9; */
         background-color: #002fff;
@@ -136,7 +141,7 @@
         margin-top: 100px;
     }
 
-    img {
+    #imageId {
         border: 1px solid rgb(218 209 209);
         padding: 15px;
         border-width: 1px;
@@ -145,6 +150,33 @@
 </style>
 
 <body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="homePage.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <button type="submit">Search</button>
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <!-- cart.html href link -->
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div id="parent">
         <div id="image">
             <!-- Image Border -->
@@ -158,7 +190,7 @@
             <p>Buy at best price from hare</p>
             <div class="inner">
                 <h2 id="rate"></h2>
-                <button>Buy Now</button>
+                <button id="by">Buy Now</button>
             </div>
             <p>Get Instant Cashback when you pay using Amazon Pay... Click Here</p>
             <h3>Book Specification</h3>
@@ -221,17 +253,29 @@
                 <tr>
                     <td>Amazon, Paperback</td>
                     <td id="trate"></td>
-                    <td><input type="button" value="Add to cart"></td>
+                    <td id="btns"><input type="button" value="Add to cart"></td>
                 </tr>
             </table>
 
         </div>
     </div>
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="Refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="homePage.htmll">Quick Buyer</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
 <script>
-    document.querySelector("input").addEventListener("click", myFun)
+    document.querySelector("#btns").addEventListener("click", myFun)
     let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
     const currentPageData = JSON.parse(localStorage.getItem('currentPageData'))
 
@@ -245,7 +289,7 @@
 
 
     function myFun() {
-        if (cartDatapresent(cartData, currentPageData.name)) {
+        if (cartDatapresent(cartData, currentPageData.name) == true) {
             alert('This item is already in cart!')
         } else {
             cartData.push(currentPageData)
@@ -254,11 +298,22 @@
         }
 
     }
-    document.querySelector("button").addEventListener("click", myBtn)
+    document.querySelector("#btns").addEventListener("click", myBtn)
     function myBtn() {
         localStorage.setItem("buyCartData", JSON.stringify(currentPageData))
 
 
+    }
+    document.querySelector("#by").addEventListener("click", buyFun)
+    function buyFun() {
+        let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
+        if (cartDatapresent(cartData, currentPageData.name) === false) {
+            cartData.push(currentPageData);
+            localStorage.setItem("buyCartData", JSON.stringify(cartData));
+        } else {
+            alert("Item already in cart");
+        }
+        location.href = "cart.html";
     }
 
     function cartDatapresent(cartData, name) {
