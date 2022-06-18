@@ -11,6 +11,8 @@ header
     background-color:#2874f0;
     height: 70px;
     font-size: 20px;
+	 position: sticky;
+    top: 0;
 }
 #container
 {
