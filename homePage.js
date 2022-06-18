@@ -181,8 +181,8 @@ function displayfunction() {
     buycart.setAttribute("id", "buycart");
     let proBuy = document.createElement("button");
     proBuy.innerText = "Buy Now";
+    let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
     proBuy.addEventListener("click", function () {
-      let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
       if (cartDatapresent(cartData, el) === false) {
         cartData.push(el);
         localStorage.setItem("buyCartData", JSON.stringify(cartData));

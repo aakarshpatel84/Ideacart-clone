@@ -69,7 +69,7 @@
         margin-bottom: 10px;
     }
 
-    #btns>input {
+    .add-to-cart-button>input {
         height: 36px;
         margin: auto;
         border-radius: 9px;
@@ -86,7 +86,7 @@
         background-color: #ff9806;
     }
 
-    #btns>input:hover {
+    .add-to-cart-button>input:hover {
         counter-reset: white;
         /* background-color: #0085f9; */
         background-color: #002fff;
@@ -253,7 +253,7 @@
                 <tr>
                     <td>Amazon, Paperback</td>
                     <td id="trate"></td>
-                    <td id="btns"><input type="button" value="Add to cart"></td>
+                    <td id="add-to-cart" class="add-to-cart-button"><input type="button" value="Add to cart"></td>
                 </tr>
             </table>
 
@@ -275,7 +275,7 @@
 
 </html>
 <script>
-    document.querySelector("#btns").addEventListener("click", myFun)
+    document.querySelector("#add-to-cart").addEventListener("click", myFun)
     let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
     const currentPageData = JSON.parse(localStorage.getItem('currentPageData'))
 
@@ -294,16 +294,10 @@
         } else {
             cartData.push(currentPageData)
             localStorage.setItem("buyCartData", JSON.stringify(cartData))
-            alert("Added")
         }
 
     }
-    document.querySelector("#btns").addEventListener("click", myBtn)
-    function myBtn() {
-        localStorage.setItem("buyCartData", JSON.stringify(currentPageData))
 
-
-    }
     document.querySelector("#by").addEventListener("click", buyFun)
     function buyFun() {
         let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
