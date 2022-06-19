@@ -165,7 +165,7 @@ function displayfunction(productArr) {
     box11.addEventListener("click", function () {
       localStorage.setItem("currentPageData", JSON.stringify(el));
 
-      location.href = "product.html";
+      location.href = "productPage.html";
     });
 
     let box12 = document.createElement("div");

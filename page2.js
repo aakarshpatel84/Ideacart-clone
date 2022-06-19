@@ -202,7 +202,7 @@ function displayfunction() {
     box11.addEventListener("click", function () {
       localStorage.setItem("currentPageData", JSON.stringify(el));
 
-      location.href = "product.html";
+      location.href = "productPage.html";
     });
 
     let box12 = document.createElement("div");
@@ -256,7 +256,7 @@ function displayfunction() {
   }
 }
 document.querySelector("#page1").addEventListener("click", function () {
-  location.href = "homePage.html"; //next page number 2 href
+  location.href = "index.html"; //next page number 2 href
 });
 document.querySelector("#page3").addEventListener("click", function () {
   location.href = "page3.html"; //next page number 2 href
