@@ -1,0 +1,99 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  width: 28%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#containerForBook {
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 25px;
+}
+
+#containerForBook > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#containerForBook > div:hover {
+  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#box11:hover {
+  cursor: pointer;
+}
+
+#box11 > div:nth-child(1) > img {
+  width: 100%;
+  height: 300px;
+}
+
+#box11 > div:nth-child(2) > p {
+  font-size: 18px;
+}
+
+#box12 > div {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#box12 > div:nth-child(1) {
+  color: grey;
+}
+
+#box12 > div:nth-child(2) {
+  text-align: center;
+  width: 20%;
+  padding: 1px 3px;
+  background-color: #388e3c;
+  color: white;
+  border-radius: 5px;
+}
+
+#box12 > div:nth-child(3) {
+  font-size: 18px;
+}
+
+#buycart {
+  display: flex;
+  justify-content: space-around;
+}
+#box12 > div > button:first-child {
+  border: none;
+  width: 40%;
+  background-color: #2874f0;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box12 > div > button:last-child {
+  border: none;
+  width: 50%;
+  height: 40px;
+  background-color: #2874f0;
+  color: white;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#box12 > div > button:hover {
+  background-color: #fc2802;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="cruserComman.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="index.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <input type="submit" value="Search" id="searchbooks">
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <h1>Defence Preparation Book</h1>
+    <div id="containerForBook"></div>
+    </div>
+
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="index.html">Quick Buyer</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    let productArr = [{
+        img: "https://rukminim1.flixcart.com/image/612/612/ktlu9ow0/book/y/r/c/34-years-nta-neet-ug-physics-chemistry-biology-chapterwise-original-imag6wysgwppzscm.jpeg?q=70",
+        name: "Nta Neet (Ug) Physics, Chemistry & Biology",
+        details: "34 Years Nta Neet (Ug) Physics, Chemistry & Biology Chapterwise & Topicwise Solved Papers with Value Added Notes (2021 - 1988)",
+        category: "Medical Entrance",
+        price: 658,
+        rating: 4.5
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/612/612/koad9jk0/book/f/d/k/objective-physics-chapter-wise-mcqs-for-nta-jee-main-bitsat-neet-original-imag2s6pcghjt2sh.jpeg?q=70",
+        name: "Objective Physics",
+        details: "Objective Physics Chapter-wise MCQs for NTA JEE Main/ BITSAT/ NEET/ AIIMS 3rd Edition (English, Paperback, Disha Experts)",
+        category: "Medical",
+        price: 145,
+        rating: 4.3
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kyt0ya80/book/s/w/b/-original-imagaygqmregftyd.jpeg?q=70",
+        name: "Combo GO TO Objective NEET Physics, Chemistry & Biology",
+        details: "Combo GO TO Objective NEET Physics, Chemistry & Biology with DPP & CPP Sheets (set of 3 books) 9th Edition (Paperback, Disha Experts)",
+        category: "Medical Entrance",
+        price: 1400,
+        rating: 3.8
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kjem3rk0-0/book/l/k/g/750-blockbuster-problems-in-biology-for-neet-original-imafyz6fmty3evgh.jpeg?q=70",
+        name: "Biology for NEET",
+        details: "750+ Blockbuster Problems in Biology for NEET  (Paperback, Disha Experts)",
+        category: "Medical Entrance",
+        price: 164,
+        rating: 4.4
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/612/612/kvwpt3k0/book/l/t/z/5-new-pattern-mock-tests-for-nta-neet-ug-2022-4th-edition-original-imag8p9dzzuxh5kg.jpeg?q=70",
+        name: "Mock Tests for NTA NEET",
+        details: "5 New Pattern Mock Tests for NTA NEET (UG) 2022 - 4th Edition  (Paperback, Disha Experts)",
+        category: "Medical Entrance",
+        price: 125,
+        rating: 4.3
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kvwpt3k0/book/j/c/k/lakshya-nta-neet-ug-2022-past-13-varsh-solved-papers-7-mock-original-imag8p9dbzpvkz6r.jpeg?q=70",
+        name: "NTA NEET (UG) 2022 ",
+        details: "Lakshya NTA NEET (UG) 2022 - Past 13 Varsh Solved Papers & 7 Mock Tests 4th Edition  (Paperback, Disha Experts)",
+        category: "Medical Entrance",
+        price: 380,
+        rating: 4.1
+    },
+
+
+    ];
+
+
+    displayfunction(productArr);
+
+    function displayfunction(productArr) {
+        productArr.forEach(function (el) {
+            let box = document.createElement("div");
+
+
+            let box11 = document.createElement("div");
+            box11.setAttribute("id", "box11");
+            let proImgDiv = document.createElement("div");
+            let proImg = document.createElement("img");
+            proImg.setAttribute("src", el.img);
+            proImgDiv.append(proImg);
+            let proNameDiv = document.createElement("div");
+            let proName = document.createElement("p");
+            proName.innerText = el.name;
+            proNameDiv.append(proName);
+            box11.append(proImgDiv, proNameDiv);
+            box11.addEventListener("click", function () {
+                localStorage.setItem("currentPageData", JSON.stringify(el));
+
+                location.href = "product.html";
+            });
+
+
+            let box12 = document.createElement("div");
+            box12.setAttribute("id", "box12")
+            let proCategory = document.createElement("div");
+            proCategory.innerText = "Category :" + " " + el.category;
+            let proRating = document.createElement("div");
+            proRating.innerText = el.rating + " " + "✡";
+            let proPrice = document.createElement("div");
+            proPrice.innerText = "₹" + el.price;
+
+            let buycart = document.createElement("div");
+            buycart.setAttribute("id", "buycart");
+            let proBuy = document.createElement("button");
+            proBuy.innerText = "Buy Now";
+            proBuy.addEventListener("click", function () {
+                let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
+                if (cartDatapresent(cartData, el) === false) {
+                    cartData.push(el);
+                    localStorage.setItem("buyCartData", JSON.stringify(cartData));
+                }
+                else {
+                    alert("Item already in cart");
+                }
+                location.href = "cart.html";  // give cart page href 
+            });
+            let proCart = document.createElement("button");
+            proCart.innerText = "Add to Cart";
+            proCart.addEventListener("click", function () {
+                let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
+                if (cartDatapresent(cartData, el) === false) {
+                    cartData.push(el);
+                    localStorage.setItem("buyCartData", JSON.stringify(cartData));
+                    alert("Item successfully added to cart");
+                }
+                else {
+                    alert("Item already in cart");
+                }
+            });
+
+            buycart.append(proBuy, proCart);
+            box12.append(proCategory, proRating, proPrice, buycart);
+            box.append(box11, box12);
+            document.querySelector("#containerForBook").append(box);
+        });
+
+        function cartDatapresent(cartData, el) {
+            for (let i = 0; i < cartData.length; i++) {
+                if (cartData[i].name === el.name) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+</script>

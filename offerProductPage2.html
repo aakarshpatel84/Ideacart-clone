@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="cruserComman.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="index.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <input type="submit" value="Search" id="searchbooks">
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <h1>IAS Preparation Book</h1>
+    <div id="containerForBook"></div>
+    </div>
+
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="index.html">Quick Buyer</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    let productArr = [{
+        img: "https://rukminim1.flixcart.com/image/416/416/ku5ufm80/book/w/s/t/27-years-upsc-ias-ips-prelims-topic-wise-solved-papers-1-2-1995-original-imag7ccfwggpt7sq.jpeg?q=70",
+        name: "Upsc IAS/ Ips Prelims Topic",
+        details: "27 Years Upsc IAS/ Ips Prelims Topic-Wise Solved Papers 1 & 2 (1995 - 2021)",
+        category: "Civil Services",
+        price: 379,
+        rating: 4.5
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kxaq7ww0/book/k/t/y/the-yearly-current-affairs-2022-for-competitive-exams-upsc-state-original-imag9s3bfrnzcd5a.jpeg?q=70",
+        name: "Current Affairs 2022",
+        details: "The Yearly Current Affairs 2022 for Competitive Exams (Upsc, State Psc, Ssc, Bank Po/ Clerk, Bba, MBA, Rrb, Nda, Cds, Capf, Crpf)(English)",
+        category: "General",
+        price: 129,
+        rating: 4.3
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kklhbbk0/book/p/z/n/upsc-new-syllabus-tips-to-crack-ias-preliminary-and-mains-exam-original-imafzwtr9gguvpvj.jpeg?q=70",
+        name: " Tips to Crack IAS Preliminary and Mains Exam",
+        details: "UPSC New Syllabus & Tips to Crack IAS Preliminary and Mains Exam with Rapid GK 2019 ebook 3rd Edition  (English, Paperback, Experts Disha)",
+        category: "UPSC",
+        price: 120,
+        rating: 4.3
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kyt0ya80/book/i/d/q/-original-imagaygq3dznuund.jpeg?q=70",
+        name: "Varsh Upsc IAS/ Ips Prarambhik Topic",
+        details: "27 Varsh Upsc IAS/ Ips Prarambhik Topic-Wise Solved Papers 1 & 2 (1995 - 2021)  (Hindi, Paperback, Patel Mrunal)",
+        category: "Civil Services",
+        price: 344,
+        rating: 4.5
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/kkfrjww0/book/z/8/b/6-years-upsc-civil-services-ias-mains-topic-wise-solved-papers-original-imafzsktzuth3rmg.jpeg?q=70",
+        name: "UPSC Civil Services IAS Mains Topic",
+        details: "6 Years UPSC Civil Services IAS Mains Topic-wise Solved Papers (2020 to 2015) for Paper B (Compulsory English)",
+        category: "UPSC",
+        price: 329,
+        rating: 4.4
+    },
+    {
+        img: "https://rukminim1.flixcart.com/image/416/416/khwbde80-0/book/6/e/9/indian-history-culture-compendium-for-ias-prelims-general-original-imafxt9pzjtgzuhh.jpeg?q=70",
+        name: "Indian History & Culture Compendium",
+        details: "Indian History & Culture Compendium for IAS Prelims General Studies Paper 1 & State PSC Exams 4th Edition  (Paperback, Disha Experts)",
+        category: "UPSC",
+        price: 277,
+        rating: 4.3
+    },
+
+
+    ];
+
+    displayfunction(productArr);
+
+    function displayfunction(productArr) {
+        productArr.forEach(function (el) {
+            let box = document.createElement("div");
+
+
+            let box11 = document.createElement("div");
+            box11.setAttribute("id", "box11");
+            let proImgDiv = document.createElement("div");
+            let proImg = document.createElement("img");
+            proImg.setAttribute("src", el.img);
+            proImgDiv.append(proImg);
+            let proNameDiv = document.createElement("div");
+            let proName = document.createElement("p");
+            proName.innerText = el.name;
+            proNameDiv.append(proName);
+            box11.append(proImgDiv, proNameDiv);
+            box11.addEventListener("click", function () {
+                localStorage.setItem("currentPageData", JSON.stringify(el));
+
+                location.href = "product.html";
+            });
+
+
+            let box12 = document.createElement("div");
+            box12.setAttribute("id", "box12")
+            let proCategory = document.createElement("div");
+            proCategory.innerText = "Category :" + " " + el.category;
+            let proRating = document.createElement("div");
+            proRating.innerText = el.rating + " " + "✡";
+            let proPrice = document.createElement("div");
+            proPrice.innerText = "₹" + el.price;
+
+            let buycart = document.createElement("div");
+            buycart.setAttribute("id", "buycart");
+            let proBuy = document.createElement("button");
+            proBuy.innerText = "Buy Now";
+            proBuy.addEventListener("click", function () {
+                let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
+                if (cartDatapresent(cartData, el) === false) {
+                    cartData.push(el);
+                    localStorage.setItem("buyCartData", JSON.stringify(cartData));
+                }
+                else {
+                    alert("Item already in cart");
+                }
+                location.href = "cart.html";  // give cart page href 
+            });
+            let proCart = document.createElement("button");
+            proCart.innerText = "Add to Cart";
+            proCart.addEventListener("click", function () {
+                let cartData = JSON.parse(localStorage.getItem("buyCartData")) || [];
+                if (cartDatapresent(cartData, el) === false) {
+                    cartData.push(el);
+                    localStorage.setItem("buyCartData", JSON.stringify(cartData));
+                    alert("Item successfully added to cart");
+                }
+                else {
+                    alert("Item already in cart");
+                }
+            });
+
+            buycart.append(proBuy, proCart);
+            box12.append(proCategory, proRating, proPrice, buycart);
+            box.append(box11, box12);
+            document.querySelector("#containerForBook").append(box);
+        });
+
+        function cartDatapresent(cartData, el) {
+            for (let i = 0; i < cartData.length; i++) {
+                if (cartData[i].name === el.name) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+</script>
