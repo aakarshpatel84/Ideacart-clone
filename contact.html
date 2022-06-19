@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        h3 {
+            text-align: center;
+            color: white;
+            text-decoration: underline;
+            padding-top: 30px;
+
+        }
+
+        label {
+            color: white;
+            font-weight: bold;
+        }
+
+        .content {
+
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+            grid-column-gap: 10px;
+
+        }
+
+        .content>div {
+
+            margin: auto;
+        }
+
+        #fname,
+        #lname,
+        #email,
+        #phone {
+            width: 500px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+
+
+        }
+
+        #fname,
+        #lname,
+        #email,
+        #phone:focus {
+            outline: none;
+        }
+
+        .content:nth-child(1) {
+            margin: auto;
+            text-align: center;
+        }
+
+        .main {
+            text-align: center;
+            margin: auto;
+            justify-content: center;
+        }
+
+        #address {
+            width: 90%;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+
+        #address:focus {
+            outline: none;
+        }
+
+        #btn {
+            height: 30px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        input:hover {
+            border-color: rgb(255, 255, 0);
+
+        }
+
+        textarea:hover {
+            border-color: rgb(255, 255, 0);
+            ;
+        }
+
+        #home {
+            background-image: url("https://images.wallpaperscraft.com/image/single/books_library_shelves_138556_3840x2160.jpg");
+            background-size: cover;
+            height: 450px;
+            margin-top: 2px;
+        }
+
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            #address {
+                width: 80%;
+            }
+
+            #fname,
+            #lname,
+            #email,
+            #phone {
+                width: 300px;
+
+            }
+        }
+
+        @media all and (min-width: 320px) and (max-width: 767px) {
+
+            #address {
+                width: 80%;
+            }
+
+            #fname,
+            #lname,
+            #email,
+            #phone {
+                width: 150px;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="index.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <input type="submit" value="Search" id="searchbooks">
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="home">
+        <h3>You can contact Our team by filling this form</h3>
+        <form>
+            <div class="content">
+                <div>
+                    <label>Firstname*</label><br>
+                </div>
+                <div>
+                    <label>Lastname*</label><br>
+                </div>
+                <div>
+                    <input type="text" placeholder="please enter your first name*" id="fname" required><br>
+                </div>
+
+                <div>
+                    <input type="text" placeholder="please enter your last name*" id="lname" required><br>
+                </div>
+                <div>
+                    <label>Email* </label><br>
+                </div>
+                <div>
+                    <label>Phone No</label><br>
+                </div>
+                <div>
+                    <input type="email" placeholder="please enter your email*" id="email" required><br>
+                </div>
+                <div>
+                    <input type="number" placeholder="please enter your phone no*" id="phone" required><br>
+                </div>
+            </div>
+            <div class="main">
+                <label>Message*</label><br>
+                <textarea rows="5" cols="15" placeholder="Enter Your query" id="address" required></textarea><br>
+            </div>
+            <input type="submit" id="btn" value="Send Message">
+        </form>
+    </div>
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="index.html">Quick Buyer</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+<script>
+
+    let arr = JSON.parse(localStorage.getItem("Contact")) || [];
+    document.querySelector("form").addEventListener("submit", contactMe);
+    function contactMe(event) {
+        event.preventDefault();
+        obj = {
+            fname: document.querySelector("#fname").value,
+            lname: document.querySelector("#lname").value,
+            email: document.querySelector("#email").value,
+            phone: document.querySelector("#phone").value,
+            address: document.querySelector("#address").value
+        }
+        arr.push(obj);
+        console.log(arr);
+        localStorage.setItem("Contact", JSON.stringify(arr));
+    }
+
+</script>

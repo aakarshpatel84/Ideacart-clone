@@ -1,0 +1,125 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header {
+  z-index: 1;
+  width: 100%;
+  background-color: #2874f0;
+  /* border-radius: 10px; */
+  height: 70px;
+  font-size: 20px;
+  position: sticky;
+  top: 0px;
+}
+#container {
+  width: 1280px;
+  margin: auto;
+}
+#check-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 10px 0px;
+}
+.logo {
+  text-decoration: none;
+  color: yellow;
+  padding-left: 10px;
+  margin-left: 30px;
+  display: flex;
+}
+.logo > img {
+  width: 30px;
+  background-color: #2874f0;
+}
+.tab-nav {
+  outline: none;
+  display: none;
+}
+label {
+  display: none;
+  color: white;
+}
+
+.burger {
+  width: 35px;
+  height: 5px;
+
+  background-color: white;
+  margin-top: 5px;
+}
+
+#searchbooks {
+  width: 100px;
+  padding: 6px;
+  margin-left: -5px;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 17px;
+  background-color: white;
+  border-left: 1px solid black;
+}
+#check-box > form > input[type="submit"]:hover {
+  background-color: #fc2802;
+  color: white;
+}
+#card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#card > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card > div > a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+#card > div > a:hover {
+  color: yellow;
+  font-weight: bold;
+}
+#card > div > a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.9s;
+}
+#card > div > a > img {
+  width: 60%;
+  background: none;
+  border-radius: 10px;
+}
+
+#card > div > a {
+  text-align: center;
+}
+
+.search {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  width: 80%;
+  margin-left: -210px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.search:focus {
+  outline: none;
+}

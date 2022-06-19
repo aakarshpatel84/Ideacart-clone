@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .main>form {
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 30%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: rgba(214, 210, 210, 0.694);
+        }
+
+        .main>form>label {
+            font-size: 20px;
+        }
+
+        .main>form>input[type="submit"] {
+            background-color: #2b619e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .main>form>input[type="submit"]:hover {
+            background-color: #3973b6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .main>form>input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        p {
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        img {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        h1 {
+            text-align: center;
+            margin: auto;
+            text-decoration: underline;
+            color: yellow
+        }
+
+        .main {
+
+            background-image: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_588609682_375595.jpg");
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="index.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <input type="submit" value="Search" id="searchbooks">
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <h1> Sign Up</h1>
+        <form>
+            <label for="">Name</label><br />
+            <input type="text" placeholder="Enter name" id="name"><br>
+            <label for="">Email</label><br />
+            <input type="email" placeholder="Enter email" id="email"><br>
+            <label for="">Mobile No</label><br />
+            <input type="number" placeholder="Enter moblie" id="mobile">
+            <br>
+            <label for="">Password</label><br />
+            <input type="password" placeholder="Enter password" id="pwd">
+            <input type="submit">
+        </form>
+    </div>
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="index.html">Quick Buyer</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.querySelector(".main>form").addEventListener("submit", myForm);
+
+    let arr = JSON.parse(localStorage.getItem("datalis")) || [];
+    function myForm() {
+        event.preventDefault();
+        let obj = {
+            name: document.querySelector("#name").value,
+            em: document.querySelector("#email").value,
+            mob: document.querySelector("#mobile").value,
+            pwd: document.querySelector("#pwd").value
+        };
+
+        //console.log(arr);
+        let flag = true;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].em === obj.em) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            arr.push(obj);
+            localStorage.setItem("datalis", JSON.stringify(arr));
+            alert("Successfully signup");
+            location.href = "login.html";
+
+
+        }
+        else {
+            alert("Email already exist");
+        }
+    }
+</script>

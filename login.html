@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .main>form {
+            margin: auto;
+            margin-top: 50px;
+            width: 30%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 30px;
+            background-color: rgba(214, 210, 210, 0.694);
+            border-radius: 5px;
+        }
+
+        #pwd:focus {
+            outline: none;
+        }
+
+        #email {
+            outline: none;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        .main>form>input[type="submit"] {
+            background-color: #2b619e;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .main>form>input[type="submit"]:hover {
+            background-color: #3973b6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        input[type="number"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: yellow;
+        }
+
+        .main {
+            height: 500px;
+            background-image: url("https://images2.alphacoders.com/261/thumb-1920-26102.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="index.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <input type="submit" value="Search" id="searchbooks">
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <h1>Login</h1>
+        <form>
+            <label for="">Email</label><br />
+            <input type="email" placeholder="Enter email...." id="email"><br>
+            <br>
+            <label for="">Password</label><br />
+            <input type="password" placeholder="Ente password...." id="pwd">
+            <input type="submit">
+        </form>
+    </div>
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="index.html">Quick Buyer</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+<script>
+    document.querySelector(".main>form").addEventListener("submit", clickMe);
+
+    let arr1 = JSON.parse(localStorage.getItem("datalis")) || [];
+    console.log(arr1);
+    let l = arr1.length;
+    console.log(l);
+    function clickMe() {
+        event.preventDefault();
+        let email = document.querySelector("#email").value;
+        let pass = document.querySelector("#pwd").value;
+        console.log(email);
+        console.log(pass);
+        let flag = 0;
+        for (let i = 0; i < l; i++) {
+            if (arr1[i].em == email && arr1[i].pwd == pass) {
+                flag = 1;
+                break;
+
+            }
+        }
+        if (flag == 0) {
+            alert("Invalid Input or Not Register");
+        }
+        else {
+            localStorage.setItem("loginOrNot", "true");
+            alert("Successfully login");
+            window.location.href = "index.html";
+        }
+    }
+</script>

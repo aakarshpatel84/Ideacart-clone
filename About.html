@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        h1 {
+            text-align: center;
+            color: yellow
+        }
+
+        .about {
+
+            border: 0px;
+            border-radius: 5px;
+            padding-top: 20px;
+            text-align: center;
+            background-color: #474e5d;
+            color: white;
+            padding-bottom: 50px;
+
+        }
+
+        .about>p {
+            padding-top: 10px;
+        }
+
+        .team>div>img {
+            width: 250px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .team>div {
+            margin: auto;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            border-radius: 5px;
+
+        }
+
+        .team>div>h2 {
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        .team {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            grid-row-gap: 20px;
+            grid-column-gap: 1px;
+            border-radius: 5px;
+        }
+
+        .about+h1 {
+            color: red;
+            text-decoration: underline;
+        }
+
+        @media all and (min-width: 768px) and (max-width: 1024px) {
+            .team {
+                width: 70%;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, auto);
+
+            }
+
+
+        }
+
+        @media all and (min-width: 320px) and (max-width: 767px) {
+            .team {
+                width: 70%;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, auto);
+
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav id="check-box">
+                <a href="index.html" class="logo">
+                    <h2>IDEAKART</h2>
+                </a>
+                <!-- homepage will be link in this  page -->
+
+                <form>
+                    <input type="text" placeholder="search...." class="search">
+                    <input type="submit" value="Search" id="searchbooks">
+                </form>
+                <div id="card">
+                    <div><a href="About.html">About</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="login.html">Sign In</a></div>
+                    <div><a href="signup.html">Sign Up</a></div>
+                    <div><a href="cart.html"><img
+                                src="https://mpng.subpng.com/20190404/sar/kisspng-portable-network-graphics-clip-art-computer-icons-buy-shopping-cart-svg-png-icon-free-download-561-5ca6a63da9af56.187623941554425405695.jpg"></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="about">
+        <h1>About Us</h1>
+        <p> Ideakart is a site that gives u an idea about the book you want to buy. We offer a huge collection of books
+            in diverse categories.</p>
+
+        <p>We have a user friendly search engine and a quick delivery system. With this we even provide best discounts
+            on our books. You can write to us for any idea or any help you need.</p>
+
+        <p>Ideakart is a site that gives u an idea and a platform for the book you want. We offer a huge collection of
+            books in diverse categories.</p>
+
+        <p>We have a user friendly search engine and a quick delivery system. With this we even provide best discounts
+            on our books. You can write to us for any idea or any help you need.</p>
+    </div>
+    <h1>Our Team</h1>
+    <div class="team">
+
+    </div>
+    <footer>
+        <h1 class="footerheading">Get to know Us</h1>
+        <ul>
+            <li><a href="About.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/">Search</a></li>
+            <li><a href="policy.html">Privacy Policy</a></li>
+            <li><a href="refund.html">Refund Policy</a></li>
+            <li><a href="earn.html">Earn money Online</a></li>
+            <li><a href="index.html">Quick Buyer</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
+<script>
+    let arr = [
+        { image: "https://ca.slack-edge.com/T034U5VTU6T-U039DC14TDM-159a6c817bc0-512", name: "Aakarsh Patel" },
+        { image: "https://ca.slack-edge.com/T034U5VTU6T-U036V2K6L2G-a24f945f9d01-512", name: "Deepanshi Singh" },
+        { image: "https://ca.slack-edge.com/T034U5VTU6T-U038D5SJ936-694374c6419d-512", name: "Prity Paul" },
+        { image: "https://ca.slack-edge.com/T034U5VTU6T-U037VKYUVN3-3fbe6776cf0a-512", name: "Yash Rajput" },
+        { image: "https://ca.slack-edge.com/T034U5VTU6T-U037Y3DEFEX-6c838c6a4509-512", name: "Anuj singh" },
+        { image: "https://ca.slack-edge.com/T034U5VTU6T-U038CAXSNEB-fba9669ac682-512", name: "Prashant Mishra" }
+
+    ];
+    arr.forEach(function (ele) {
+        let tr = document.createElement("div");
+        let td1 = document.createElement("img");
+        td1.src = ele.image;
+        td2 = document.createElement("h2");
+        td2.innerText = ele.name;
+        tr.append(td1, td2);
+        document.querySelector(".team").append(tr);
+    });
+</script>
