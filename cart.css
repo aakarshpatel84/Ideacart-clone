@@ -1,0 +1,240 @@
+body {
+  background-color: #e8ecef;
+}
+.heading {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 5px;
+  background: #f6f480;
+  font-family: Andale Mono, monospace;
+  font-size: larger;
+}
+
+.heading > h1 {
+  padding: 20px;
+}
+
+.logo1 > img {
+  width: 25%;
+  height: auto;
+  margin-top: 10px;
+  margin-right: -30px;
+  border-radius: 8px;
+}
+
+.cartHeader {
+  /* border: 1px solid rebeccapurple; */
+  width: 55%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.cartHeader > a {
+  padding: 20px 0px;
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  font-family: Gill Sans, sans-serif;
+}
+
+.cartHeader > h2 {
+  margin-top: 15px;
+}
+
+#box {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#box1 > img {
+  width: 80%;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding-left: 10px;
+}
+
+#box2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#box2 > p + p {
+  color: red;
+}
+
+th {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+  width: 25%;
+  background-color: rgba(161, 160, 160, 0.297);
+  color: black;
+}
+
+#content {
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+#delete {
+  font-size: large;
+  background-color: #e4cccc;
+  color: blue;
+  width: auto;
+}
+
+table {
+  width: 100%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+
+#quantity {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#increase {
+  width: 15%;
+  height: 20px;
+  /* font-size: large; */
+  background-color: rgb(147, 145, 145);
+  color: white;
+  border: transparent;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 5px;
+}
+
+#decrease {
+  /* font-size: large; */
+  width: 15%;
+  height: 50px;
+  height: 20px;
+  background-color: rgb(147, 145, 145);
+  color: white;
+  border: transparent;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 5px;
+}
+
+#number {
+  font-size: large;
+  padding: 10px;
+}
+
+#checkout {
+  width: 25%;
+  height: auto;
+  padding: 40px;
+  justify-content: right;
+  position: relative;
+  left: 200px;
+  padding-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(255, 250, 250);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 38px;
+}
+
+#checkout > h2 {
+  text-align: center;
+  font-family: Andale Mono, monospace;
+  font-size: xx-large;
+  padding: 20px;
+}
+
+#container1 {
+  display: flex;
+  padding: 0px;
+  margin: auto;
+  padding: 14px;
+}
+
+#checkout > button {
+  size: 40px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 14px;
+  width: 45%;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#itemsHeading {
+  width: 55%;
+}
+
+#price {
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #container1 {
+    display: block;
+    margin: auto;
+  }
+
+  #checkout {
+    line-height: 28px;
+    width: 45%;
+    justify-content: left;
+    left: 10px;
+    margin-top: 30px;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+  #container1 {
+    display: block;
+    margin: auto;
+  }
+
+  #checkout {
+    line-height: 28px;
+    width: 80%;
+    justify-content: left;
+    left: 10px;
+    margin-top: 30px;
+    font-size: small;
+  }
+
+  #checkout > button {
+    font-size: 10px;
+  }
+
+  .cartHeader {
+    width: 80%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    width: 90%;
+  }
+}
