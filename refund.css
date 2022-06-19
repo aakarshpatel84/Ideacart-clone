@@ -1,0 +1,11 @@
+#refundmain {
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#refundmain > p {
+  margin-bottom: 20px;
+  line-height: 40px;
+  max-inline-size: 1000px;
+}

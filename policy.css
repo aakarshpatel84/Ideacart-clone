@@ -1,0 +1,20 @@
+footer li a {
+  text-decoration: none;
+  color: rgb(78, 159, 205);
+}
+
+#policymain {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#policymain > p + ul {
+  margin-left: 25px;
+}
+
+#policymain > p {
+  margin-bottom: 20px;
+  line-height: 25px;
+  max-inline-size: 1000px;
+}

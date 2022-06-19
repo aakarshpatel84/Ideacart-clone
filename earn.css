@@ -1,0 +1,96 @@
+#mainearn {
+  margin-top: 35px;
+}
+
+#info {
+  height: 400px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 4%;
+}
+
+#info > div {
+  height: 80%;
+  margin: auto;
+  width: 30%;
+  border: 1px solid black;
+  padding: 1%;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#info > div > p {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: rgb(140, 173, 201);
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#info > div > ul {
+  list-style: none;
+}
+
+#info > div > ul > li::before {
+  content: "•";
+  color: #2874f0;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+#info > div > ul > li {
+  padding-left: 5px;
+  text-align: left;
+}
+
+#info > div > ul > li > a {
+  text-decoration: none;
+  color: rgb(78, 159, 205);
+}
+
+#video > iframe {
+  margin: auto;
+  margin-left: 5%;
+}
+
+/* button {
+  display: inline;
+  background-color: rgb(34, 104, 189);
+  padding: 1% 2%;
+  border: none;
+  border-radius: 6px;
+} */
+
+#btn > button > a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+#top {
+  margin-left: 5%;
+  margin-bottom: 4%;
+}
+
+#btn {
+  width: auto;
+  margin: auto;
+  margin-top: 3%;
+  text-align: center;
+}
+
+#btn > button {
+  border: none;
+  width: 8%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(34, 104, 189);
+  padding: 2px 5px;
+  border-radius: 6px;
+  height: 35px;
+}
