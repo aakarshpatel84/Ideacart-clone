@@ -168,4 +168,31 @@
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   }
+  /* for large screen */
+  @media all and (min-width:768px) and (max-width:1024px){
+    #containerForBook {
+      width: 90%;
+      margin: auto;
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 25px;
+      
+  }
+}
+  /* for small screen */
+  @media all and (min-width:320px) and (max-width:767px){
+    #containerForBook {
+      width: 90%;
+      margin: auto;
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 25px;
+      
+  }
+  }
+
   
