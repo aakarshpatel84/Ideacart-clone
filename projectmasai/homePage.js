@@ -318,3 +318,23 @@ let productArr = [
     displayfunction(productArr);
     
   }
+  document.querySelector("#check-box>form").addEventListener("submit",searchData); 
+  function searchData(event)
+  {
+    event.preventDefault();
+    let search=document.querySelector(".search").value;
+    
+   let arr2=productArr.filter(function(ele)
+    {
+     if(ele.category==search)
+        {
+           return ele;
+        }
+        
+       
+    });
+   console.log(arr2);
+   
+   displayfunction(arr2);
+  
+  }
